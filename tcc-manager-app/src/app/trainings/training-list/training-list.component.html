@@ -1,0 +1,12 @@
+<table>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Description</th>
+  <tbody>
+  <tr *ngFor="let training of trainings; let i=index">
+    <td>{{training.id}}</td>
+    <td>{{training.name}}</td>
+    <td>{{training.description}}</td>
+  </tr>
+  </tbody>
+</table>
