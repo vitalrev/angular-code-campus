@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Training} from "../../training.model";
 
 @Component({
@@ -8,14 +8,9 @@ import {Training} from "../../training.model";
 })
 export class TrainingListComponent implements OnInit {
 
-  public trainings: Training[];
+  @Input() public trainings: Training[];
 
-  constructor() {
-    this.trainings = [
-      new Training('Angular2'), new Training("TypeScript"),
-      new Training("AngularJS"), new Training("React")
-    ];
-  }
+  constructor() {}
 
   ngOnInit() {
   }
