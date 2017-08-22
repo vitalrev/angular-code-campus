@@ -2,11 +2,13 @@
   <th>ID</th>
   <th>Name</th>
   <th>Description</th>
+  <th>Action</th>
   <tbody>
   <tr *ngFor="let training of trainings; let i=index">
     <td>{{training.id}}</td>
     <td>{{training.name}}</td>
     <td>{{training.description}}</td>
+    <td><a href="#" (click)="onListItemClicked($event, training)">show</a></td>
   </tr>
   </tbody>
 </table>

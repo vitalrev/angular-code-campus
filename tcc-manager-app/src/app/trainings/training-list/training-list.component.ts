@@ -15,4 +15,7 @@ export class TrainingListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onListItemClicked(event, training) {
+    console.log(event, training);
+  }
 }
