@@ -4,6 +4,7 @@ import { TrainingListComponent } from './training-list/training-list.component';
 import { TrainingDetailsComponent } from './training-details/training-details.component';
 import {FormsModule} from "@angular/forms";
 import {TrainingService} from "./training.service";
+import { TakePlaceSoonPipe } from './take-place-soon.pipe';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import {TrainingService} from "./training.service";
   providers: [
     TrainingService
   ],
-  declarations: [TrainingListComponent, TrainingDetailsComponent],
+  declarations: [TrainingListComponent, TrainingDetailsComponent, TakePlaceSoonPipe],
   exports: [TrainingListComponent, TrainingDetailsComponent]
 })
 export class TrainingsModule { }
