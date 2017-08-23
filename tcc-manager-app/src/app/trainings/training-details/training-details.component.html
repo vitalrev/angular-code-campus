@@ -1,0 +1,14 @@
+<form class="form-horizontal">
+  <div class="form-group row">
+    <label for="trainingName" class="col-sm-2 col-form-label">Selected training</label><br>
+    <input id="trainingName" name="trainingName" class="col-sm-10" [(ngModel)]="training.name"/>
+  </div>
+  <div class="form-group row">
+    <label for="trainingDesc" class="col-sm-2 col-form-label">Description</label><br>
+    <span id="trainingDesc" class="col-sm-10">{{training.description}}</span>
+  </div>
+  <div class="form-group row">
+    <label for="trainingDImg" class="col-sm-2 col-form-label">Image</label><br>
+    <div><img id="trainingDImg" class="col-sm-10" [src]="training.imageUrl"/></div>
+  </div>
+</form>

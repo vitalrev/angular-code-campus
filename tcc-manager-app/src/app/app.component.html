@@ -1,12 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    tcc Manager App
-  </h1>
+<div class="wrapper">
+  <div class="container">
+    <div class="tab-content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <h1>
+            tcc Manager App
+          </h1>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <app-training-list [trainings]="trainings" (trainingSelected)="onTrainingSelected($event)"></app-training-list>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <app-training-details *ngIf="trainingSelected" [training]="trainingSelected"></app-training-details>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<app-training-list [trainings]="trainings"></app-training-list>
-
-
-
-
-
