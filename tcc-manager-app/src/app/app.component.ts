@@ -1,5 +1,6 @@
 import {Component, Output} from '@angular/core';
 import {Training} from "./training.model";
+import {TrainingService} from "./trainings/training.service";
 
 @Component({
   selector: 'app-root',
@@ -10,13 +11,8 @@ export class AppComponent {
   public trainings: Training[];
   public trainingSelected: Training;
 
-  constructor() {
-    this.trainings = [
-      new Training('Angular2', "cool training", "assets/images/trainings/images-3.jpeg"),
-      new Training("TypeScript", "Programming language for Angular", "assets/images/trainings/images-4.jpeg"),
-      new Training("AngularJS", "oldtimer", "assets/images/trainings/images-5.jpeg", true),
-      new Training("React", "letzter Dreck", "assets/images/trainings/images-6.jpeg")
-    ];
+  constructor(public trainingService: TrainingService) {
+    this.trainings = trainingService.getAll();
   }
 
   onTrainingSelected(training: Training) {
