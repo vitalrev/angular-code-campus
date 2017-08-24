@@ -1,5 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="wrapper">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-left" style="height: 60px;">
+        <img src="./assets/images/trainings/trainings.png"
+             style="height: 60px; padding-right: 10px; width: auto; position: relative; display: inline-block; max-height: 100%; line-height: 60px;"></a>
+      <a href="/" class="navbar-left" style="height: 60px;">HOME</a>
+    </div>
+  </div>
+</nav>
+<br>
   <div class="container">
     <div class="tab-content">
       <div class="row">
@@ -10,17 +20,6 @@
         </div>
       </div>
       <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <app-training-list [trainings]="trainings" (trainingSelected)="onTrainingSelected($event)"></app-training-list>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <app-training-details *ngIf="trainingSelected" [training]="trainingSelected"></app-training-details>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
-</div>

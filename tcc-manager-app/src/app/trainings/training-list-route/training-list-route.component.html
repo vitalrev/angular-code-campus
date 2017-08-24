@@ -1,0 +1,2 @@
+<app-training-list [trainings]="trainings" (trainingSelected)="onTrainingSelected($event)"></app-training-list>
+<app-training-details *ngIf="trainingSelected" [training]="trainingSelected"></app-training-details>

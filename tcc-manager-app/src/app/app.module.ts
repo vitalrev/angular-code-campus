@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {TrainingsModule} from "./trainings/trainings.module";
+import {RouterModule} from "@angular/router";
+import {routes} from "./app.routes";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, TrainingsModule
+    BrowserModule,
+    TrainingsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
