@@ -17,7 +17,10 @@
         <div class="col-sm-6">
           <input type="date" class="form-control" style="width:200px;"
                  id="trainingDate" [class.take-placesoon]="training.nextRun | takePlaceSoon"
-                 formControlName="nextRun">
+                 formControlName="nextRun" [class.is-invalid]="form.hasError('discontinuedCantRunning')">
+          <div class="invalid-feedback">
+            Discontinued training can be reactivated
+          </div>
         </div>
       </div>
       <div class="form-group row">

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {TrainingsModule} from "./trainings/trainings.module";
 import {RouterModule} from "@angular/router";
 import {routes} from "./app.routes";
+import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,10 @@ import {routes} from "./app.routes";
     TrainingsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
