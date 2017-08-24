@@ -8,7 +8,7 @@ import { TakePlaceSoonPipe } from './take-place-soon.pipe';
 import {TrainingListRouteComponent} from "./training-list-route/training-list-route.component";
 import {RouterModule} from "@angular/router";
 import {TrainingDetailsRouteComponent} from "./training-details-route/training-details-route.component";
-import {DiscontinuedValidator} from "./training-details/discontinued-validator";
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import {DiscontinuedValidator} from "./training-details/discontinued-validator";
     CommonModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
     TrainingService
